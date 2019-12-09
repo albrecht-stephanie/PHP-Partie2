@@ -1,19 +1,20 @@
 <?php
 $page = 'Exercice 6';
 include '../header.php';
-$age= 78;?>
-<div class="card-header font-weight-bold bg-info">Suis-je majeur ou mineur ?</div>
-<p>J'ai<?= $age ?>ans</p>
-<?php
+$age= 78;
+$result = " ";
 if($age >= 18)
 {
-    echo 'Tu es majeur';
+    $result = 'Tu es majeur';
 }
 else
 {
-    echo 'Tu n\'es pas majeur';
+    $result = 'Tu n\'es pas majeur';
 }
 ?>
+<div class="card-header font-weight-bold bg-info">Suis-je majeur ou mineur ?</div>
+<p>J'ai<?= $age ?>ans</p>
+<p><?= $result ?></p>
 </div>
 </div> 
 <?php include '../footer.php'; ?>

@@ -2,25 +2,26 @@
 $page = 'Exercice 3';
 include '../header.php';
 $age = 19;
-$genre = 'femme';?>
-<div class="card-header font-weight-bold bg-info">Homme/Femme et Majeur/Mineur ?</div>
-<?php
-if($age >= 18 AND $genre == 'homme')
+$genre = 'femme';
+$result = " ";
+if($age >= 18 && $genre == 'homme')
 {
-    echo 'Vous êtes un homme et vous êtes majeur';
+    $result = 'Vous êtes un homme et vous êtes majeur';
 }
-elseif($age < 18 AND $genre == 'homme')
+elseif($age < 18 && $genre == 'homme')
 {
-    echo 'Vous êtes un homme et vous êtes mineur';
+    $result = 'Vous êtes un homme et vous êtes mineur';
 }
-elseif($age >= 18 AND $genre == 'femme')
+elseif($age >= 18 && $genre == 'femme')
 {
-    echo 'Vous êtes un femme et vous êtes majeur';
+    $result = 'Vous êtes une femme et vous êtes majeure';
 }
-elseif($age < 18 AND $genre == 'femme')
+elseif($age < 18 && $genre == 'femme')
 {
-    echo 'Vous êtes un femme et vous êtes mineur';
+    $result = 'Vous êtes une femme et vous êtes mineure';
 }?>
+<div class="card-header font-weight-bold bg-info">Homme/Femme et Majeur/Mineur ?</div>
+<p><?= $result ?></p>
 </div>
 </div> 
 <?php include '../footer.php'; ?>

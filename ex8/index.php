@@ -1,18 +1,18 @@
 <?php
 $page = 'Exercice 8';
-include '../header.php';?>
-<div class="card-header font-weight-bold bg-info">Est-ce que ce gâteau est-il bon? </div>
-<?php
-$isOk = NULL;
+include '../header.php';
+$result = " ";
 if($isOk)
 {
-    echo 'c\'est ok !!';
+    $result = 'C\'est ok !!';
 }
-elseif($isOk == NULL)
+else
 {
-    echo 'c\'est pas bon !!!';
+    $result = 'C\'est pas bon !!!';
 }
 ?>
+<div class="card-header font-weight-bold bg-info">Est-ce que ce gâteau est-il bon? </div>
+<p><?= $result ?></p>
 </div>
 </div> 
 <?php include '../footer.php'; ?>

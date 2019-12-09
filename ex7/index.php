@@ -1,18 +1,19 @@
 <?php
 $page = 'Exercice 7';
 include '../header.php';
-$isOk = false;?>
-<div class="card-header font-weight-bold bg-info">Est-ce que le test fonctionne ?</div>
-<?php
-if($isOk ==false)
+$isOk = false;
+$result = " ";
+if(!$isOk)
 {
-    echo 'c\'est pas bon';
+    $result = 'C\'est pas bon';
 }
 else
 {
-    echo 'c\'est ok';
+    $result = 'C\'est ok';
 }
 ?>
+<div class="card-header font-weight-bold bg-info">Est-ce que le test fonctionne ?</div>
+<p><?= $result ?></p>
 </div>
 </div> 
 <?php include '../footer.php'; ?>
